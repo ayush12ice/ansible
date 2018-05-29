@@ -1,0 +1,570 @@
+ubuntu@control:/work/ansible$ history
+    1  pwd
+    2  hostname control
+    3  su -
+    4  sudo su -
+    5  su -
+    6  pwd
+    7  vi /etc/sudoers
+    8  su -
+    9  pwd
+   10  ls -al
+   11  cd .ssh/
+   12  ls
+   13  cat authorized_keys
+   14  pwd
+   15  ssh-keygen -t rsa
+   16  ls -al
+   17  ssh-copy-id -i ubuntu@app01
+   18  ssh app01
+   19  ssh-copy-id -i ubuntu@app02
+   20  cd .ssh/
+   21  ls a-l
+   22  ls -al
+   23  ssh app02
+   24  ssh-copy-id -i ubuntu@db01
+   25  ssh-copy-id -i ubuntu@lb01
+   26  ssh lb01
+   27  ssh db01
+   28  pwd
+   29  passwd
+   30  su -
+   31  pwd
+   32  mkdir -p /work/ansible
+   33  sudo mkdir -p /work/ansible
+   34  cd /work/ansible/
+   35  ls -ltrah
+   36  pwd
+   37  cd ../
+   38  pwd
+   39  cd ~/.ssh
+   40  pwd
+   41  ls
+   42  cat authorized_keys
+   43  ssh-copy-id -i control
+   44  cd /work/ansible/
+   45  pwd
+   46  ls -ltrah
+   47  cd playbooks/
+   48  ls
+   49  sudo apt-get update
+   50  sudo apt-get install software-properties-common
+   51  sudo apt-add-repository ppa:ansible/ansible
+   52  sudo apt-get update
+   53  sudo apt-get install ansible
+   54  ansible --version
+   55  python --version
+   56  ansible-playbook --version
+   57  ansible-galaxy --version
+   58  ansible-galaxy --help
+   59  pwd
+   60  ansible-playbook hostname.yml
+   61  pwd
+   62  cd ../
+   63  ls
+   64  ansible-playbook playbooks/hostname.yml
+   65  pwd
+   66  ls
+   67  ls -ltrah
+   68  vi de
+   69  vi dev
+   70  ls
+   71  cd playbooks/
+   72  ls
+   73  vi hostname.retry
+   74  ls -altrah
+   75  rm *retry
+   76  ls -ltarh
+   77  cd ../
+   78  ansible-playbook playbooks/hostname.yml
+   79  rm playbooks/hostname.retry
+   80  ansible-playbook playbooks/hostname.yml
+   81  ls -ltrah
+   82  vi control.yml
+   83  ansible-playbook control.yml
+   84  ansible-playbook loadbalancer.yml
+   85  cat loadbalancer.yml
+   86  cat database.yml
+   87  ansible-playbook database.yml
+   88  ls
+   89  cat webserver.yml
+   90  ansible-playbook webserver.yml
+   91  cat webserver.yml
+   92  curl lb01
+   93  curl db01
+   94  curl app02
+   95  curl app01
+   96  curl lb01
+   97  curl app01
+   98  pwd
+   99  vi webserver.yml
+  100  ansible-playbook webserver.yml
+  101  curl app01
+  102  vi webserver.yml
+  103  ansible-playbook webserver.yml
+  104  curl app01
+  105  curl app02
+  106  curl lb01
+  107  pwd
+  108  mkdir templates
+  109  vi templates/nginx.conf.j2
+  110  vi loadbalancer.yml
+  111  ansible-playbook loadbalancer.yml
+  112  vi loadbalancer.yml
+  113  cat /etc/hosts
+  114  ansible-playbook loadbalancer.yml
+  115  curl app01
+  116  curl app02
+  117  curl lb01
+  118  curl lb02
+  119  curl lb01
+  120  curl lb02
+  121  curl lb01
+  122  curl lb02
+  123  pwd
+  124  ls
+  125  vi database.yml
+  126  ansible-playbook database.yml
+  127  ansible -a "netstat -an" db0
+  128  curl app01/db
+  129  vi webserver.yml
+  130  ansible-playbook webserver.yml
+  131  vi database.yml
+  132  ansible-playbook database.yml
+  133  vi database.yml
+  134  ansible-playbook database.yml
+  135  curl app01/db
+  136  curl lb01/db
+  137  curl app01
+  138  curl lb01
+  139  curl lb01/db
+  140  cat database.yml
+  141  cat webserver.yml
+  142  curl lb01/db
+  143  curl lb01
+  144  curl lb01/db
+  145  cd /work/ansible/
+  146  ansible-playbook playbooks/hostname.yml
+  147  ansible -m ping all
+  148  ansible -a "hostname -a" all
+  149  vi playbooks/stack_status.yml
+  150  ansible-playbook playbooks/stack_status.yml
+  151  vi playbooks/stack_status.yml
+  152  ansible-playbook playbooks/stack_status.yml
+  153  vi playbooks/stack_restart.yml
+  154  sudo apt-get install git
+  155  pwd
+  156  dpkg -s git
+  157  git
+  158  cd ../
+  159  ls -ltrah
+  160  git init
+  161  ls -ltrah
+  162  pwd
+  163  rm -rf .git/
+  164  ls -ltrah
+  165  cd ansible/
+  166  git init
+  167  git
+  168  git --global-config --list
+  169  git config --global
+  170  git config --global -l
+  171  git config --global user.name "Ayush Gupta"
+  172  git config --global user.email "ayush12ice@gmail.com"
+  173  git config --global -e
+  174  git config --global -l
+  175  pwd
+  176  cd ../
+  177  git remote add origin https://github.com/ayush12ice/ansible.git
+  178  cd -
+  179  git remote add origin https://github.com/ayush12ice/ansible.git
+  180  git remote -c
+  181  git remote -v
+  182  cat ~/.ssh/id_rsa.pub
+  183  pwd
+  184  ls -al
+  185  git add .
+  186  git status
+  187  git commit -m "First commit"
+  188  git remote add origin git@github.com:ayush12ice/ansible.git
+  189  git remote remove
+  190  git remote remove origin
+  191  git remote add origin git@github.com:ayush12ice/ansible.git
+  192  git remote -v
+  193  git status
+  194  git push origin master
+  195  git pull
+  196  git push origin master
+  197  git pull master
+  198  git remote remove origin
+  199  git remote -v
+  200  git remote add origin git@github.com:ayush12ice/ansible.git
+  201  git remote -v
+  202  git push -u origin master
+  203  git status
+  204  pwd
+  205  git pull
+  206  ls -ltrah
+  207  vi loadbalancer.
+  208  vi loadbalancer.yml
+  209  ansible-playbook loadbalancer.
+  210  vi .gitignore
+  211  git status
+  212  git add .
+  213  git status
+  214  git commit -m "adding gitignore"
+  215  git status
+  216  git push
+  217  pwd
+  218  git rm -r --cached .
+  219  git add .
+  220  git commit -m "Enabling gitignore"
+  221  git push
+  222  ls -ltrah
+  223  rm loadbalancer.retry
+  224  ansible-playbook loadbalancer.yml
+  225  cat loadbalancer.yml
+  226  vi control.yml
+  227  ansible-playbook control.yml
+  228  vi playbooks/stack_status.yml
+  229  ansible-playbook playbooks/stack_status.yml
+  230  curl app01
+  231  curl app01/db
+  232  curl app02/db
+  233  curl lb01
+  234  curl lb01/db
+  235  vi playbooks/stack_status.yml
+  236  http://groups.loadbalancer
+  237  curl http://groups.loadbalancer
+  238  ansible -a "curl http://groups.loadbalancer" all
+  239  ansible -m uri -a "http://groups.loadbalancer" all
+  240  vi playbooks/stack_status.yml
+  241  ansible-playbook playbooks/stack_status.yml
+  242  vi playbooks/stack_status.yml
+  243  ansible-playbook playbooks/stack_status.yml
+  244  git status
+  245  git commit -am "stack_status.yml update for uri, register, fail, when"
+  246  git status
+  247  git push
+  248  vi database.yml
+  249  vi webserver.yml
+  250  cat templates/nginx.conf.j2
+  251  mkdir roles
+  252  cd roles
+  253  ansible-galaxy init control
+  254  ls -ltrah
+  255  cd control/
+  256  ls -ltrah
+  257  cd ../.
+  258  ls
+  259  pwd
+  260  ansible-galaxy init nginx
+  261  ansible-galaxy init apache2
+  262  ansible-galaxy init demo_app
+  263  ansible-galaxy init mysql
+  264  ls -ltrah
+  265  cd ../
+  266  cat control.yml
+  267  cd roles/
+  268  ls
+  269  cd on
+  270  cd control/
+  271  ls
+  272  cd tasks/
+  273  ls -la
+  274  vi main.yml
+  275  cd -
+  276  cd ../../
+  277  ls
+  278  vi control.yml
+  279  ansible-playbook control.yml
+  280  cat database.yml
+  281  vi roles/mysql/tasks/main.yml
+  282  vi roles/mysql/handlers/main.yml
+  283  vi database.yml
+  284  ansible-playbook database.yml
+  285  cat loadbalancer.yml
+  286  vi roles/nginx/tasks/main.yml
+  287  vi roles/nginx/handlers/main.yml
+  288  vi loadbalancer.yml
+  289  ls
+  290  cd roles/
+  291  ls
+  292  cd nginx/
+  293  ls
+  294  cd /work/ansible/
+  295  pwd
+  296  ls templates/
+  297  mv templates/nginx.conf.j2 roles/nginx/templates/
+  298  ls templates/
+  299  pwd
+  300  ls roles/nginx/templates/
+  301  vi roles/nginx/tasks/main.yml
+  302  pwd
+  303  cat webserver.yml
+  304  vi roles/apache2/tasks/main.yml
+  305  vi roles/demo_app/tasks/main.yml
+  306  vi roles/apache2/tasks/main.yml
+  307  vi roles/demo_app/tasks/main.yml
+  308  vi webserver.yml
+  309  vi roles/apache2/tasks/main.yml
+  310  vi roles/apache2/handlers/main.yml
+  311  vi webserver.yml
+  312  vi roles/demo_app/tasks/main.yml
+  313  vi roles/demo_app/handlers/main.yml
+  314  vi webserver.yml
+  315  ls roles/demo_app/
+  316  ls
+  317  mv demo roles/demo_app/files/
+  318  ls
+  319  ls roles/demo_app/
+  320  ls roles/demo_app/files
+  321  vi roles/apache2/tasks/main.yml
+  322  vi site.yml
+  323  ansible-playbook site.yml
+  324  vi site.yml
+  325  ansible-playbook site.yml
+  326  ansible-playbook playbooks/stack_status.
+  327  ansible-playbook playbooks/stack_status.yml
+  328  vi roles/mysql/tasks/main.yml
+  329  ansible -m setup db01
+  330  vi roles/mysql/tasks/main.yml
+  331  ansible-playbook database.yml
+  332  ansible-playbook playbooks/stack_status.yml
+  333  vi playbooks/stack_status.
+  334  vi playbooks/stack_status.yml
+  335  vi playbooks/stack_restart.yml
+  336  ansible-playbook playbooks/stack_status.yml
+  337  vi roles/mysql/tasks/main.yml
+  338  vi roles/mysql/defaults/main.yml
+  339  vi database.yml
+  340  cat database.yml
+  341  git status
+  342  vi roles/nginx/tasks/main.yml
+  343  vi roles/nginx/defaults/main.yml
+  344  vi roles/nginx/tasks/main.yml
+  345  vi roles/nginx/templates/nginx.conf.j2
+  346  ansible-playbook loadbalancer.yml
+  347  vi roles/nginx/defaults/main.yml
+  348  vi roles/nginx/templates/nginx.conf.j2
+  349  vi roles/nginx/tasks/main.yml
+  350  vi roles/nginx/defaults/main.yml
+  351  vi roles/nginx/tasks/main.yml
+  352  ansible-playbook loadbalancer.yml
+  353  ansible-playbook playbooks/stack_status.yml
+  354  ssh lb01
+  355  vi roles/nginx/tasks/main.yml
+  356  ansible-playbook loadbalancer.yml
+  357  vi roles/nginx/tasks/main.yml
+  358  ansible-playbook loadbalancer.yml
+  359  vi roles/nginx/tasks/main.yml
+  360  ssh lb01
+  361  ansible-playbook loadbalancer.yml
+  362  ssh lb01
+  363  ansible-playbook loadbalancer.yml
+  364  vi roles/nginx/tasks/main.yml
+  365  ansible-playbook loadbalancer.yml
+  366  ansible -a "ls -1 /etc/nginx/sites-enabled" lb01
+  367  ansible -m shell -a "ls -1 /etc/nginx/sites-enabled" lb01
+  368  vi roles/nginx/tasks/main.yml
+  369  ansible-playbook loadbalancer.yml
+  370  vi roles/nginx/tasks/main.yml
+  371  ansible-playbook loadbalancer.yml
+  372  ssh lb01
+  373  vi roles/demo_app/files/demo/app/demo.wsgi
+  374  mv roles/demo_app/files/demo/app/demo.wsgi roles/demo_app/templates/
+  375  vi roles/demo_app/templates/demo.wsgi
+  376  mv roles/demo_app/templates/demo.wsgi roles/demo_app/templates/demo.wsgi.j2
+  377  vi roles/demo_app/templates/demo.wsgi
+  378  vi roles/demo_app/templates/demo.wsgi.j2
+  379  vi roles/demo_app/tasks/main.yml
+  380  vi webserver.yml
+  381  ansible-playbook webserver.yml
+  382  vi webserver.yml
+  383  vi roles/demo_app/tasks/main.yml
+  384  cd roles/demo_app/
+  385  ls
+  386  cd templates/
+  387  ls
+  388  ls -al
+  389  vi /work/ansible/loadbalancer.yml
+  390  vi /work/ansible/roles/nginx/tasks/main.yml
+  391  cd ../../../
+  392  pwd
+  393  vi roles/demo_app/tasks/main.yml
+  394  ansible-playbook webserver.yml
+  395  git status
+  396  pwd
+  397  ls
+  398  mkdir group_vars
+  399  vi group_vars/all
+  400  vi database.yml
+  401  vi webserver.
+  402  vi webserver.yml
+  403  ansible-playbook database.yml
+  404  ls
+  405  vi group_vars/all
+  406  vi database.yml
+  407  vi group_vars/all
+  408  ls a-l
+  409  ls -al
+  410  vi database.
+  411  vi database.yml
+  412  ansible-playbook database.yml
+  413  vi roles/mysql/tasks/main.yml
+  414  ansible-playbook database.yml
+  415  ansible-playbook webserver.
+  416  ansible-playbook webserver.yml
+  417  git status
+  418  git add .
+  419  git status
+  420  git commit -m "Modular configuration with roles"
+  421  git status
+  422  git push
+  423  cd group_vars/
+  424  ls
+  425  mv all vars
+  426  mkdir all
+  427  mv vars all/
+  428  ls
+  429  ls -ltrah
+  430  ls all/
+  431  cd all/
+  432  ansible-vault create vault
+  433  ls
+  434  cat va
+  435  cat vault
+  436  ansible-vault edit vault
+  437  vi vars
+  438  cd ../../
+  439  ansible-playbook site.yml
+  440  ansible-playbook --ask-vault-pass 12345 site.yml
+  441  ansible-playbook --ask-vault-pass site.yml
+  442  history
+ubuntu@control:/work/ansible$
+
+  443  echo "12345" > ~/.vault_pass.txt
+  444  chmod 0600 ~/.vault_pass.txt
+  445  vi ansible.cfg
+  446  cat ansible.cfg
+  447  history
+
+  
+
+
+    6  cd /work/ansible/
+    7  ansible-playbook site.yml
+    8  ansible-playbook playbooks/stack_status.yml
+    9  curl app01/db
+   10  curl app02/db
+   11  curl lb01/db
+   12  pwd
+   13  git status
+   14  git add .
+   15  git status
+   16  git commit -m "Encrypting the plain text passwd for db"
+   17  git status
+   18  git push
+   19  time ansible-playbook site.yml
+   20  time ansible-playbook playbooks/stack_status.yml
+   21  time ansible-playbook playbooks/stack_restart.yml
+   22  vi playbooks/stack_status.yml
+   23  time ansible-playbook playbooks/stack_status.yml
+   24  vi playbooks/stack_restart.yml
+   25  vi playbooks/hostname.yml
+   26  vi roles/apache2/tasks/main.yml
+   27  vi control.yml
+   28  vi loadbalancer.yml
+   29  vi webserver.yml
+   30  vi site.yml
+   31  vi roles/apache2/tasks/main.yml
+   32  vi roles/control/tasks/main.yml
+   33  vi roles/demo_app/tasks/main.yml
+   34  vi roles/mysql/tasks/main.yml
+   35  vi roles/nginx/tasks/main.yml
+   36  time ansible-playbook site.yml
+   37  vi site.
+   38  vi site.yml
+   39  time ansible-playbook site.yml
+   40  vi site.yml
+   41  time ansible-playbook site.yml
+   42  ansible-playbook site.yml --limit app01
+   43  vi roles/control/tasks/main.yml
+   44  ansible-playbook site.yml --list-tags
+   45  ansible-playbook site.yml --tags "packages"
+   46  ansible-playbook site.yml --skip-tags "packages"
+   47  cat roles/control/tasks/main.yml
+   48  vi roles/apache2/tasks/main.yml
+   49  vi roles/demo_app/tasks/main.yml
+   50  vi roles/mysql/tasks/main.yml
+   51  vi roles/nginx/tasks/main.yml
+   52  vi roles/mysql/tasks/main.yml
+   53  pwd
+   54  vi site.
+   55  vi site.yml
+   56  ansible-playbook site.yml --list-tags
+   57  time ansible-playbook site.yml --skip-tags "packages"
+   58  ansible-playbook playbooks/stack_status.yml
+   59  vi playbooks/stack_status.yml
+   60  ansible-playbook playbooks/stack_status.yml
+   61  vi roles/nginx/tasks/main.yml
+   62  ansible-playbook site.yml  --limit lb01 --tags "configure"
+   63  ansible-playbook site.yml
+   64  ansible-playbook playbooks/stack_status.yml
+   65  ansible --version
+   66  vi /etc/ansible/ansible.cfg
+   67  vi ansible.cfg
+   68  sudo visudo
+   69  vi ansible.cfg
+   70  git status
+   71  ls -al
+   72  vi ~
+   73  cat ~
+   74  vi dev
+   75  vi ~
+   76  rm ~
+   77  vi \~
+   78  date
+   79  cat webserver.yml
+   80  vi '~'
+   81  vi '\~'
+   82  ls -ltrah
+   83  git status
+   84  ls -ltrah
+   85  rm '\~'
+   86  rm '~'
+   87  ls -ltrah
+   88  git status
+   89  git commit -am "optimized the playbooks"
+   90  git status
+   91  git push
+   92  ansible-playbook site.yml
+   93  curl app01
+   94  curl app02
+   95  curl lb01
+   96  curl lb01/db
+   97  curl lb01
+   98  curl app02/db
+   99  curl app01/db
+  100  history
+
+    3  cd /work/ansible/
+    4  ansible-playbook site.yml --step
+    5  ansible-playbook site.yml --list-tasks
+    6  ansible-playbook site.yml --start-at-task "copy demo app source"
+    7  ansible-playbook --syntax-check site.yml
+    8  git status
+    9  ansible-playbook --check site.yml
+   10  ansible-playbook site.yml
+   11  vi roles/nginx/tasks/main.yml
+   12  ansible-playbook site.yml --limit lb01 --start-at-task "get active sites"
+   13  vi roles/nginx/tasks/main.yml
+   14  ansible-playbook site.yml --limit lb01 --start-at-task "get active sites"
+   15  vi roles/nginx/tasks/main.yml
+   16  ansible-playbook site.yml --limit lb01 --start-at-task "get active sites"
+   17  git status
+   18  git commit -am "Added debug commands in nginx tasks main.yml"
+   19  git push
+   20  history
+
+  
